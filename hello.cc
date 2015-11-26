@@ -18,3 +18,9 @@ NAN_METHOD(Echo) {
     info.GetReturnValue().Set(Nan::New(inputStr).ToLocalChecked());
 }
 
+NAN_METHOD(EchoNumber) {
+    int a = 1000;
+    info.GetReturnValue().Set(Nan::New<Number>(a));
+}
+
+

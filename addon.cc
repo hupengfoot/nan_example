@@ -21,6 +21,8 @@ NAN_MODULE_INIT(InitAll) {
 	    Nan::GetFunction(Nan::New<FunctionTemplate>(EchoAsync)).ToLocalChecked());
     Nan::Set(target, Nan::New("EchoBinary").ToLocalChecked(),
 	    Nan::GetFunction(Nan::New<FunctionTemplate>(EchoBinary)).ToLocalChecked());
+    Nan::Set(target, Nan::New("EchoNumber").ToLocalChecked(),
+	    Nan::GetFunction(Nan::New<FunctionTemplate>(EchoNumber)).ToLocalChecked());
 }
 
 NODE_MODULE(addon, InitAll)

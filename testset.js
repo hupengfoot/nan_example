@@ -1,6 +1,7 @@
 var addon = require('./build/Release/addon.node');
 
 console.error(addon.Echo('hello kitty!'));
+console.error(addon.EchoNumber());
 
 addon.EchoAsync('hello kitty!', function(err, info){
     console.error(info);
